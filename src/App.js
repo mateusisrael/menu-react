@@ -1,17 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Lampada from './components/Lampada';
+import Menu from './components/Menu';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <Lampada/>
 
-      </header>
-    </div>
-  );
+class App extends React.Component{
+  constructor(props) {
+    super(props)
+
+    this.estacoes = [
+      'outono',
+      'primavera',
+      'verao',
+      'inverno',
+    ]
+
+    this.estaco_selecionada = '';
+  }
+
+  render () {
+    return(
+        <div className="App">
+          <Menu estacoes={this.estacoes}/>
+        </div>
+      );
+    }
 }
 
 export default App;
