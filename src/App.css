@@ -2,6 +2,10 @@
   text-align: center;
 }
 
+*{
+  list-style: none;
+}
+
 .App-logo {
   height: 40vmin;
 }
@@ -39,4 +43,24 @@
 
 .lamp-acesa{
   color: yellow;
+}
+
+.menu{
+  cursor: pointer;
+  color: red;
+  font-size: 40px;
+}
+
+.estacao-cont{
+  padding: 10px 0px 10px 0px;
+  background: silver;
+  width: auto;
+  cursor: pointer;
+}
+.estacao-cont:hover{
+  background: rgb(158, 158, 158);
+}
+
+section{
+  background: red;
 }

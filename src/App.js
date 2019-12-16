@@ -14,7 +14,7 @@ class App extends React.Component{
       'inverno',
     ]
 
-    this.estaco_selecionada = '';
+    this.estacao_selecionada = '';
   }
 
   render () {
