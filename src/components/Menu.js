@@ -1,9 +1,6 @@
 import React from 'react';
-import { directive } from '@babel/types';
-import Inverno from './estacoes/Inverno';
-import Outono from './estacoes/Outono';
-import Primavera from './estacoes/Primavera';
-import Verao from './estacoes/Verao';
+
+
 
 
 
@@ -17,10 +14,13 @@ class Menu extends React.Component{
         }
     }
 
-    clicado = () => {
-        console.log('Clicado');
 
+    clicado = (estacao) => {
+        console.log(estacao);
+        this.props.mudarEstacao(estacao);
     }
+
+    
 
     abrirFecharMenu = () => {
         
@@ -36,7 +36,7 @@ class Menu extends React.Component{
 
                 {this.state.aberto && this.props.estacoes.map(estacao => {
                     return(
-                        <li class="estacao-cont">
+                        <li onClick={() => {this.clicado(estacao)}} class="estacao-cont">
                             <a>{estacao}</a>
                         </li>
                     );
